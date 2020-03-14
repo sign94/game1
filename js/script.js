@@ -1,9 +1,13 @@
-
+function playGame (){
+  clearMessages()
+  playerInput = 1
+  playerInput = 2
+  playerInput = 3
 
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
   let computerMove = getMoveName(randomNumber);
-  let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+  /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
   let playerMove = getMoveName(playerInput)
 
 
@@ -52,4 +56,7 @@
 
   }
   displayResult(computerMove, playerMove);
-
+}
+document.getElementById('play-scissors').addEventListener('click', playGame);
+document.getElementById('play-rock').addEventListener('click', playGame);
+document.getElementById('play-paper').addEventListener('click', playGame);
